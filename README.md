@@ -58,5 +58,5 @@ writing image:  images/magazine_0/image_49.png
 Sun  3 Apr 01:52:54 CEST 2022`
 
 
-Sample Output - more details will be available soon...
+Sample Output - more details will be available soon...  
 50 slide magazine was scanned in 1:41min
