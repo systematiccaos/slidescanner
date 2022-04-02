@@ -35,6 +35,7 @@ class Scanner():
                 self.slide_reverse()
             time.sleep(self.forward_delay)
             self.take_picture(i)
+        self.slide_forward() # eject magazine
         with zipfile.ZipFile(self.foldername + '.zip', 'w', zipfile.ZIP_DEFLATED) as zipf:
             self.zipdir(self.foldername, zipf)
 
