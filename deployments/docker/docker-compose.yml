@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+        nginx:
+                image: sysexect/nginx-dir-listing:latest
+                ports:
+                        - 8080:80
+                volumes:
+                        - ./../../images:/usr/share/nginx/html
+                command: "nginx -g 'daemon off;'"
