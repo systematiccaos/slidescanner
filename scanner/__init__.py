@@ -62,7 +62,7 @@ class Scanner():
     def get_folder_name(self):
         if self.foldername != "":
             return self.foldername
-        dirs = os.listdir(self.parentdir)
+        dirs = [self.parentdir + "/" + p for p in os.listdir(self.parentdir) if os.path.isdir(self.parentdir + "/" + p)]
         currentdir = self.parentdir + "/" + self.dirprefix
         currentdir += str(len(dirs))
         os.mkdir(currentdir, 0o777)
