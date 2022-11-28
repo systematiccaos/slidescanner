@@ -6,7 +6,7 @@ import zipfile
 
 class Scanner():
     def __init__(self):
-        self.slidenum = 50
+        self.slidenum = 36
         self.gpio = 4
         self.gpio_mode = GPIO.BCM
         self.forward_delay = 1.3
@@ -17,6 +17,8 @@ class Scanner():
         self.cam = VideoCapture(self.cam_port)
         self.cam.set(3, 4048)
         self.cam.set(4, 3040)
+        self.cam.set(14, 0.001)
+        self.cam.set(15, -50.0)
         self.parentdir = "images"
         self.dirprefix = "magazine_"
         self.fileprefix = "image_"
